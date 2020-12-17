@@ -1,0 +1,56 @@
+/*-------------------------------------------All Templates */
+
+html {
+    height: 100%;
+}
+
+h1, h2 {
+    font-family: "Signika", sans-serif;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+/*-------------------------------------------Homepage Carousel */
+
+.carousel-item {
+    height: 75vh;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.carousel-container {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+}
+
+.carousel-container h1 {
+    color: white;
+}
+
+.carousel-image-1{
+    background: url('/media/carousel-image-1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.carousel-image-2{
+    background: url('/media/carousel-image-2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.carousel-image-3{
+    background: url('/media/carousel-image-3.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.btn-dark:hover,
+.btn-dark:active,
+.btn-dark:focus {
+    background: white;
+    color: #343f4d;
+}
