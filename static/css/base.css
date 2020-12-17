@@ -10,8 +10,20 @@ h1, h2 {
 
 body {
     font-family: "Raleway", sans-serif;
+    height: calc(100vh - 164px);
 }
 
+.title-text {
+    color: #16c0f0;
+}
+
+h3, h4, h5, p {
+    color: #343f4d;
+}
+
+.block-text {
+    line-height: 3rem;
+}
 /*-------------------------------------------Homepage Carousel */
 
 .carousel-item {
@@ -55,15 +67,17 @@ body {
     color: #343f4d;
 }
 
-.view-and-collect-button {
+/*-------------------------------------------Buttons */
+
+.purple-btn {
     background: #8a25b1;
     color: white;
     min-width: 260px;
 }
 
-.view-and-collect-button:hover,
-.view-and-collect-button:active,
-.view-and-collect-button:focus {
+.purple-btn:hover,
+.purple-btn:active,
+.purple-btn:focus {
     background: #efbbff;
     color: white;
 }
