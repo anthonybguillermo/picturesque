@@ -54,3 +54,16 @@ body {
     background: white;
     color: #343f4d;
 }
+
+.view-and-collect-button {
+    background: #8a25b1;
+    color: white;
+    min-width: 260px;
+}
+
+.view-and-collect-button:hover,
+.view-and-collect-button:active,
+.view-and-collect-button:focus {
+    background: #efbbff;
+    color: white;
+}
