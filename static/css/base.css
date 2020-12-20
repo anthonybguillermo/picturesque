@@ -24,6 +24,7 @@ h3, h4, h5, p {
 .block-text {
     line-height: 3rem;
 }
+
 /*-------------------------------------------Homepage Carousel */
 
 .carousel-item {
@@ -65,6 +66,59 @@ h3, h4, h5, p {
 .btn-dark:focus {
     background: white;
     color: #343f4d;
+}
+
+/*-------------------------------------------Homepage Categories */
+
+.category-box {
+    height: 275px;
+    width: 275px;
+}
+
+.category-image {
+    background-repeat: no-repeat;
+}
+
+#artistic-image {
+    background: url('/media/artistic-image.jpg');  
+}
+
+#cityscape-image {
+    background: url('/media/cityscape-image.jpg');  
+}
+
+#food-image {
+    background: url('/media/food-image.jpg');  
+}
+
+#nature-image {
+    background: url('/media/nature-image.jpg');  
+}
+
+#people-image {
+    background: url('/media/people-image.jpg');  
+}
+
+#pop-culture-image {
+    background: url('/media/pop-culture-image.jpg');  
+}
+
+#pop-culture-image {
+    background: url('/media/pop-culture-image.jpg');  
+}
+
+#text-art-image {
+    background: url('/media/text-art-image.jpg');  
+}
+
+#travel-image {
+    background: url('/media/travel-image.jpg');  
+}
+
+.category-text {
+    color: white;
+    text-align: center;
+    padding-top: 5px;
 }
 
 /*-------------------------------------------Buttons */
