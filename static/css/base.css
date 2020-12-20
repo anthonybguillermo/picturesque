@@ -135,3 +135,73 @@ h3, h4, h5, p {
     background: #efbbff;
     color: white;
 }
+
+.search-btn {
+    background: #8a25b1;
+    color: white;
+}
+
+.search-btn:hover,
+.search-btn:active,
+.search-btn:focus {
+    background: #efbbff;
+    color: white;
+}
+
+/*-------------------------------------------Header */
+
+#logo {
+}
+
+#favicon {
+    height: 16px;
+}
+
+.logo-font {
+    color: #343f4d;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}    
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.text-black {
+    color: #343f4d !important;
+}
+
+.border-black {
+    border: 1px solid #343f4d!important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+/*   .header-container {
+        padding-top: 164px;
+    }
+}
