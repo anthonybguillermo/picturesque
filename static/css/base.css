@@ -182,6 +182,14 @@ h3, h4, h5, p {
     border: 1px solid #343f4d!important;
 }
 
+.bg-purple {
+    background: #8a25b1!important;;
+}
+
+.bg-purple h4 {
+    color: white;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -201,7 +209,7 @@ h3, h4, h5, p {
         z-index: 1030;
     }
 
-/*   .header-container {
+   .header-container {
         padding-top: 164px;
     }
 }
