@@ -11,10 +11,10 @@
                 All Posters
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-posters-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
-                <a href="" class="dropdown-item">By Category</a>
-                <a href="" class="dropdown-item">By Artist</a>
+                <a href="{% url 'posters' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'posters' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                <a href="{% url 'posters' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
+                <a href="{% url 'posters' %}?sort=artist&direction=asc" class="dropdown-item">By Artist</a>
                 <a href="{% url 'posters' %}" class="dropdown-item">All Posters</a>
             </div>
         </li>
