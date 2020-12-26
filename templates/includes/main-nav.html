@@ -15,7 +15,7 @@
                 <a href="{% url 'posters' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
                 <a href="{% url 'posters' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
                 <a href="{% url 'posters' %}?sort=artist&direction=asc" class="dropdown-item">By Artist</a>
-                <a href="{% url 'posters' %}" class="dropdown-item">All Posters</a>
+                <a href="{% url 'posters' %}?category=artistic,cityscape,food,nature,people,pop_culture,text_art,travel" class="dropdown-item">All Posters</a>
             </div>
         </li>
 
@@ -32,6 +32,7 @@
                 <a href="{% url 'posters' %}?category=pop_culture" class="dropdown-item">Pop Culture</a>
                 <a href="{% url 'posters' %}?category=text_art" class="dropdown-item">Text Art</a>
                 <a href="{% url 'posters' %}?category=travel" class="dropdown-item">Travel</a>
+                <a href="{% url 'posters' %}?category=artistic,cityscape,food,nature,people,pop_culture,text_art,travel" class="dropdown-item">All Categories</a>
             </div>
         </li>
 

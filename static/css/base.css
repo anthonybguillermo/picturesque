@@ -35,6 +35,11 @@ h3, h4, h5, p {
 	z-index: -1;
 }
 
+a.category-badge > span.badge:hover {
+    background: #343f4d!important;
+    color: #fff !important;
+}
+
 /*-------------------------------------------Homepage Carousel */
 
 .carousel-item {
