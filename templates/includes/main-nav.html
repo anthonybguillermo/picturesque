@@ -24,14 +24,14 @@
                 Categories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="category-link">
-                <a href="" class="dropdown-item">Artistic</a>
-                <a href="" class="dropdown-item">Cityscape</a>
-                <a href="" class="dropdown-item">Food</a>
-                <a href="" class="dropdown-item">Nature</a>
-                <a href="" class="dropdown-item">People</a>
-                <a href="" class="dropdown-item">Pop Culture</a>
-                <a href="" class="dropdown-item">Text Art</a>
-                <a href="" class="dropdown-item">Travel</a>
+                <a href="{% url 'posters' %}?category=artistic" class="dropdown-item">Artistic</a>
+                <a href="{% url 'posters' %}?category=cityscape" class="dropdown-item">Cityscape</a>
+                <a href="{% url 'posters' %}?category=food" class="dropdown-item">Food</a>
+                <a href="{% url 'posters' %}?category=nature" class="dropdown-item">Nature</a>
+                <a href="{% url 'posters' %}?category=people" class="dropdown-item">People</a>
+                <a href="{% url 'posters' %}?category=pop_culture" class="dropdown-item">Pop Culture</a>
+                <a href="{% url 'posters' %}?category=text_art" class="dropdown-item">Text Art</a>
+                <a href="{% url 'posters' %}?category=travel" class="dropdown-item">Travel</a>
             </div>
         </li>
 
