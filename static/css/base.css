@@ -253,3 +253,14 @@ h3, h4, h5, p {
         padding-top: 164px;
     }
 }
+
+/* add a bit of padding to the top when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
