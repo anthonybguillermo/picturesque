@@ -68,7 +68,7 @@
                                             <button class="decrement-qty btn purple-btn rounded-0" 
                                                 data-item_id="{{ poster.id }}" id="decrement-qty_{{ poster.id }}">
                                                 <span class="icon">
-                                                    <i class="fas fa-minus fa-xs"></i>
+                                                    <i class="fas fa-minus"></i>
                                                 </span>
                                             </button>
                                         </div>
@@ -80,7 +80,7 @@
                                             <button class="increment-qty btn purple-btn rounded-0"
                                                 data-item_id="{{ poster.id }}" id="increment-qty_{{ poster.id }}">
                                                 <span class="icon">
-                                                    <i class="fas fa-plus fa-xs"></i>
+                                                    <i class="fas fa-plus"></i>
                                                 </span>
                                             </button>
                                     </div>
@@ -98,6 +98,7 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
+                        </div>
                         </div>
                     </form>
                 </div>

@@ -27,7 +27,7 @@ def bag_contents(request):
                 poster_count += quantity
                 bag_items.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    'quantity': quantity,
                     'poster': poster,
                     'frame': frame,
                 })
