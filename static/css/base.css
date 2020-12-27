@@ -156,6 +156,12 @@ a.category-badge > span.badge:hover {
     min-width: 260px;
 }
 
+.purple-btn-outline {
+    background: white;
+    color: #8a25b1 !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #8a25b1;
+}
+
 .purple-btn:hover,
 .purple-btn:active,
 .purple-btn:focus {
