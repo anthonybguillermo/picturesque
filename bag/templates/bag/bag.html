@@ -43,7 +43,7 @@
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.poster.name }}</strong></p>
                                         <p class="my-0"><strong>{{ item.poster.artist }}</strong></p>
-                                        <p class="my-0"><strong>Frame: </strong></p>
+                                        <p class="my-0"><strong>Frame: </strong>{% if item.poster.has_frames %}{{ item.frame|upper }}{% else %}N/A{% endif %}</p>
                                         <p class="my-0 small text-muted">SKU: {{ item.poster.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">

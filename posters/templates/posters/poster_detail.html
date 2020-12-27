@@ -47,6 +47,8 @@
                     <form class="form" action="{% url 'add_to_bag' poster.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
+                            {% with poster.has_frames as f %}
+                            {% if f %}
                             <div class="col-12">
                                 <p><strong>Frame:</strong></p>
                                 <select class="form-control rounded-0 w-50" name="poster_frame" id='id_poster_frame'>
@@ -57,6 +59,7 @@
                                     <option value="grey">Grey</option>
                                 </select>
                             </div>
+                            {% endif %}
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
@@ -66,7 +69,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 mt-2">
+                            <div class="col{% if s %}-12 mt-2{% endif %}">
                                 <a href="{% url 'posters' %}?category=artistic,cityscape,food,nature,people,pop_culture,text_art,travel" class="btn purple-btn-outline rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
@@ -76,6 +79,7 @@
                                 <input type="submit" class="btn purple-btn rounded-0 text-uppercase mt-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% endwith %}
                         </div>
                     </form>
                 </div>
