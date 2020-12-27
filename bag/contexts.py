@@ -10,15 +10,28 @@ def bag_contents(request):
     poster_count = 0
     bag = request.session.get('bag', {})
 
-    for item_id, quantity in bag.items():
-        poster = get_object_or_404(Poster, pk=item_id)
-        total += quantity * poster.price
-        poster_count += quantity
-        bag_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'poster': poster,
-        })
+    for item_id, item_data in bag.items():
+        if isinstance(item_data, int):
+            poster = get_object_or_404(Poster, pk=item_id)
+            total += item_data * poster.price
+            poster_count += item_data
+            bag_items.append({
+                'item_id': item_id,
+                'quantity': item_data,
+                'poster': poster,
+            })
+        else:
+            poster = get_object_or_404(Poster, pk=item_id)
+            for frame, quantity in item_data['items_by_frame'].items():
+                total += quantity * poster.price
+                poster_count += quantity
+                bag_items.append({
+                    'item_id': item_id,
+                    'quantity': item_data,
+                    'poster': poster,
+                    'frame': frame,
+                })
+
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)

@@ -64,7 +64,25 @@
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ poster.id }}" id="id_qty_{{ poster.id }}">
+                                        <div class="input-group-prepend">
+                                            <button class="decrement-qty btn purple-btn rounded-0" 
+                                                data-item_id="{{ poster.id }}" id="decrement-qty_{{ poster.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-minus fa-xs"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control qty_input" type="number" 
+                                        name="quantity" value="1" min="1" max="99" 
+                                        data-item_id="{{ poster.id }}" 
+                                        id="id_qty_{{ poster.id }}">
+                                        <div class="input-group-append">
+                                            <button class="increment-qty btn purple-btn rounded-0"
+                                                data-item_id="{{ poster.id }}" id="increment-qty_{{ poster.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-plus fa-xs"></i>
+                                                </span>
+                                            </button>
                                     </div>
                                 </div>
                             </div>
@@ -86,4 +104,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'posters/includes/quantity_input_script.html' %}
 {% endblock %}
