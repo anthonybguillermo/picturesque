@@ -169,6 +169,13 @@ a.category-badge > span.badge:hover {
     color: white;
 }
 
+.purple-btn-outline:hover,
+.purple-btn-outline:active,
+.purple-btn-outline:focus {
+    background: #efbbff;
+    color: white !important;
+}
+
 .search-btn {
     background: #8a25b1;
     color: white;
