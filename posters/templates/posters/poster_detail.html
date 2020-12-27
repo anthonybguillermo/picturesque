@@ -48,6 +48,16 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
+                                <p><strong>Frame:</strong></p>
+                                <select class="form-control rounded-0 w-50" name="poster_frame" id='id_poster_frame'>
+                                    <option value="none" selected>None</option>
+                                    <option value="black">Black</option>
+                                    <option value="brown">Brown</option>
+                                    <option value="white">White</option>
+                                    <option value="grey">Grey</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
@@ -56,7 +66,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-12 mt-2">
                                 <a href="{% url 'posters' %}?category=artistic,cityscape,food,nature,people,pop_culture,text_art,travel" class="btn purple-btn-outline rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
