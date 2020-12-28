@@ -12,9 +12,25 @@
 {% block content %}
     <div class="container mt-5">
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12">
                 <h2 class="text-uppercase title-text">Contact us</h2>
+                <hr>
             </div>
+            <section class="container-fluid">
+            <div class="content-container">
+                <div class="col">
+                    <div class="contact-form">
+                        <form>
+                            <input type="text" name="name" class="form-control mt-3" id="fullname" placeholder="Full Name" required/>
+                            <input type="text" name="order_number" class="form-control mt-3" id="bookingref" placeholder="Order Number"/>
+                            <input type="text" name="emailaddress" class="form-control mt-3" id="emailaddress" placeholder="Email" required/>
+                            <textarea rows="5" name="question" class="form-control mt-3" id="message" placeholder="Message" required></textarea>
+                            <button type="submit" class="btn purple-btn rounded-pill mt-3">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </section>
         </div>
     </div>
 {% endblock %}

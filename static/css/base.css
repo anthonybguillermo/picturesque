@@ -343,6 +343,12 @@ input[name='q']::placeholder {
 
 /* -------------------------------- Media Queries */
 
+.contact-form {
+    max-width: 70%;
+}
+
+/* -------------------------------- Media Queries */
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
