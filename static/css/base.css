@@ -343,9 +343,9 @@ input[name='q']::placeholder {
 
 /* -------------------------------- Media Queries */
 
-.contact-form {
+ .contact-form {
     max-width: 70%;
-}
+} 
 
 /* -------------------------------- Media Queries */
 
