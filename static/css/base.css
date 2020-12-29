@@ -244,6 +244,21 @@ input[name='q']::placeholder {
     background: url('/media/bestseller-four.jpg');
 }
 
+/*-------------------------------------------Our Story */
+
+.story-box {
+    height: 360px;
+    width: 1610px;
+}
+
+#our-story-one {
+    background: url('/media/our-story-one.jpg');
+}
+
+#our-story-two {
+    background: url('/media/our-story-two.jpg');
+}
+
 /*-------------------------------------------Buttons */
 
 .purple-btn {
@@ -283,14 +298,7 @@ input[name='q']::placeholder {
     color: white;
 }
 
-.custom {
-    width: ;
-}
-
 /*-------------------------------------------Header */
-
-#logo {
-}
 
 #favicon {
     height: 16px;
@@ -357,14 +365,6 @@ input[name='q']::placeholder {
     color: white;
     margin-left: 1rem;
     margin-right: 1rem;
-}
-
-/* .our-story {
-    height: 50vh;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
 }
 
 /* -------------------------------- Media Queries */
