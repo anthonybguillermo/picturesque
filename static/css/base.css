@@ -341,6 +341,14 @@ input[name='q']::placeholder {
     margin-right: 1rem;
 }
 
+/* .our-story {
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
 /* -------------------------------- Media Queries */
 
  .contact-form {
