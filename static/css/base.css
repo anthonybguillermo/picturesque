@@ -226,6 +226,24 @@ input[name='q']::placeholder {
     padding-top: 5px;
 }
 
+/*-------------------------------------------Homepage Best Sellers  */
+
+#bestseller-one {
+    background: url('/media/bestseller-one.jpg');
+}
+
+#bestseller-two {
+    background: url('/media/bestseller-two.jpg');
+}
+
+#bestseller-three {
+    background: url('/media/bestseller-three.jpg');
+}
+
+#bestseller-four {
+    background: url('/media/bestseller-four.jpg');
+}
+
 /*-------------------------------------------Buttons */
 
 .purple-btn {
