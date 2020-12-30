@@ -75,31 +75,32 @@ Picturesque business goals are:
 
 As a customer to the Picturesque website I expect/want/need:
 
-|No	|I want to be able to....|So that I can...|
-|:------------:|:------------:|:------------:|:------------:|
-|1.|View a list of posters|Choose poster/s to purchase|
-|2.|View individual poster and details|Identify the price, details and view larger image|
-|3.|View total of purchases|Avoid overspending
-|4.|Select poster to purchase|Ensure correct poster is being purchased|
-|5.|View shopping basket|Verify and see if correct items are in the basket and see total cost
-|6.|Sort by poster category|Find the correct poster I'm looking for as well as checking the rating. Also sort poster by category name|
-|7.|Sort by more than one category at the same time|Search find posters among multiple categories if I'm unsure what to purchase|
-|8.|Search by poster name or artist|Find a certain poster for purchasing|
-|9.|See results of search and number of posters found|Check if stock is available|
-|10.|Adjust quantity in shopping basket|Can make changes before purchasing|
-|11.|Enter payment information easily|Quick and simple checkout|
-|12.|Feel that my personal information is kept private & confidential|Give personal information in order to make purchases|
-|13.| View order confirmation after a purchase|Check correct items were ordered|
-|14.| Receive an email confirmation after a purchase|Keep a copy of my purchase for my records
+| S.No	| I want to be able to....| So that I can...|
+| :---: | :---------------------: | :------------: |
+| 1.    | View a list of posters  | Choose poster/s to purchase |
+| 2.    | View individual poster and details|Identify the price, details and view larger image | |
+| 3.    | View total of purchases | Avoid overspending |
+| 4.    | Select poster to purchase | Ensure correct poster is being purchased|
+| 5.    | View shopping basket | Verify and see if correct items are in the basket and see total cost | 
+| 6.    | Sort by poster category | Find the correct poster I'm looking for as well as checking the rating Also sort poster by category name |
+| 7.    | Sort by more than one category at the same time|Search find posters among multiple categories if I'm unsure what to purchase |
+| 8.    | Search by poster name or artist | Find a certain poster for purchasing |
+| 9.    | See results of search and number of posters found | Check if stock is available |
+| 10.   | Adjust quantity in shopping basket | Can make changes before purchasing |
+| 11.   | Enter payment information easily | Quick and simple checkout |
+| 12.   | Feel that my personal information is kept private & confidential | Give personal information in order to make purchases |
+| 13.   |  View order confirmation after a purchase | Check correct items were ordered |
+| 14.   |  Receive an email confirmation after a purchase | Keep a copy of my purchase for my records | 
 
 As a user to the Picturesque website I expect/want/need:
-|No	|I want to be able to....|So that I can...|
-|:------------:|:------------:|:------------:|:------------:|
-|1.|Quickly register for an account|Have my own profile|
-|2.|Quickly log in and out|Access my account|
-|3.|Simple password recovery if I forget my password|Regain access to my profile|
-|4.|Receive email after account registration|Verify account creation was successful|
-|5.|Have a personalised profile|View my order history, payment confirmations and save payment preferences|
+
+| S.No	| I want to be able to....| So that I can...|
+| :---: | :---------------------: | :------------: |
+| 1.    | Quickly register for an account  | Have my own profile |
+| 2.    | Quickly log in and out|Access my account | 
+| 3.    | Simple password recovery if I forget my password | Regain access to my profile |
+| 4.    | Receive email after account registration| Verify account creation was successful|
+| 5.    | Have a personalised profile | View my order history, payment confirmations and save payment preferences | 
 
 ## Design
 ### Fonts
