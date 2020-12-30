@@ -41,7 +41,7 @@ def all_posters(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "No search criteria was entered!")
+                messages.error(request, "Please enter search criteria!")
                 return redirect(reverse('posters'))
             
             queries = Q(name__icontains=query) | Q(description__icontains=query)
