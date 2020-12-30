@@ -156,8 +156,7 @@ As a user to the Picturesque website I expect/want/need:
 ### Footer
 
 <div align="center">
-    <img src="https://i.ibb.co/M8dDY2J/picturesque-footer.png
-" alt="Picturesque footer" aria-label="Picturesque footer" />
+    <img src="https://i.ibb.co/M8dDY2J/picturesque-footer.png" alt="Picturesque footer" aria-label="Picturesque footer" />
 </div>
 
 - Footer has all the links for the user if they were to scroll to the bottom of the page.
@@ -166,8 +165,7 @@ As a user to the Picturesque website I expect/want/need:
 ### Home Page
 
 <div align="center">
-    <img src="https://i.ibb.co/WtW5wh9/pictureesque-homepage-one.png
-" alt="Picturesque homepage one" aria-label="Picturesque homepage one" />
+    <img src="https://i.ibb.co/WtW5wh9/pictureesque-homepage-one.png" alt="Picturesque homepage one" aria-label="Picturesque homepage one" />
 </div>
 
 <div align="center">
@@ -176,8 +174,7 @@ As a user to the Picturesque website I expect/want/need:
 </div>
 
 <div align="center">
-    <img src="https://i.ibb.co/mSS2Zwj/picturesque-homepage-three.png
-" alt="Picturesque homepage three" aria-label="Picturesque homepage three" />
+    <img src="https://i.ibb.co/mSS2Zwj/picturesque-homepage-three.png" alt="Picturesque homepage three" aria-label="Picturesque homepage three" />
 </div>
 
 - The home page was designed to clear and simple, yet striking. 
@@ -186,13 +183,11 @@ As a user to the Picturesque website I expect/want/need:
 ### Poster Pages
 
 <div align="center">
-    <img src="https://i.ibb.co/Vg1fd8L/picturesque-poster.png.png
-" alt="Picturesque poster" aria-label="Picturesque poster" />
+    <img src="https://i.ibb.co/Vg1fd8L/picturesque-poster.png.png" alt="Picturesque poster" aria-label="Picturesque poster" />
 </div>
 
 <div align="center">
-    <img src="https://i.ibb.co/7ShSW6Q/picturesque-poster-details.png
-" alt="Picturesque poster detail" aria-label="Picturesque poster detail" />
+    <img src="https://i.ibb.co/7ShSW6Q/picturesque-poster-details.png" alt="Picturesque poster detail" aria-label="Picturesque poster detail" />
 </div>
 
     
@@ -204,8 +199,7 @@ As a user to the Picturesque website I expect/want/need:
 ### Bag Page
 
 <div align="center">
-    <img src="https://i.ibb.co/TTFryQ5/picturesque-bag.png
-" alt="Picturesque bag" aria-label="Picturesque bag" />
+    <img src="https://i.ibb.co/TTFryQ5/picturesque-bag.png" alt="Picturesque bag" aria-label="Picturesque bag" />
 </div>
 
 - All the poster details can be viewed in the bag and the quantity can be changed and the items removed.
@@ -213,13 +207,11 @@ As a user to the Picturesque website I expect/want/need:
 ### Checkout Pages
 
 <div align="center">
-    <img src="https://i.ibb.co/BwCttwn/picturesque-checkout.png
-" alt="Picturesque checkout" aria-label="Picturesque checkout" />
+    <img src="https://i.ibb.co/BwCttwn/picturesque-checkout.png" alt="Picturesque checkout" aria-label="Picturesque checkout" />
 </div>
 
 <div align="center">
-    <img src="https://i.ibb.co/XpJLcbg/picturesque-checkout-confirmation.png
-" alt="Picturesque checkout summary" aria-label="checkout summary" />
+    <img src="https://i.ibb.co/XpJLcbg/picturesque-checkout-confirmation.png" alt="Picturesque checkout summary" aria-label="checkout summary" />
 </div>
 
 - Customers can fill out the information and payment details on the left and there is a summary of their order on the right.
@@ -228,21 +220,18 @@ As a user to the Picturesque website I expect/want/need:
 
 ### FAQs
 <div align="center">
-    <img src="https://i.ibb.co/3Tk1TPC/picturesque-faqs.png
-" alt="Picturesque faqs" aria-label="Picturesque faqs" />
+    <img src="https://i.ibb.co/3Tk1TPC/picturesque-faqs.png" alt="Picturesque faqs" aria-label="Picturesque faqs" />
 </div>
  
 ### Our Story Page
 <div align="center">
-    <img src="https://i.ibb.co/vvrtBqP/picturesque-our-story.png
-" alt="Picturesque our story" aria-label="our story" />
+    <img src="https://i.ibb.co/vvrtBqP/picturesque-our-story.png" alt="Picturesque our story" aria-label="our story" />
 </div>
 
 ### Contact Us Page
 
 <div align="center">
-    <img src="https://i.ibb.co/hB09jdj/picturesque-contact-us.png
-" alt="our contact" aria-label="contact" />
+    <img src="https://i.ibb.co/hB09jdj/picturesque-contact-us.png" alt="our contact" aria-label="contact" />
 </div>
    
    - Customers can fill out the for if they have query about and order or if a question is not in the faqs.
@@ -250,8 +239,7 @@ As a user to the Picturesque website I expect/want/need:
 ### Profile Page
 
 <div align="center">
-    <img src="https://i.ibb.co/WFkQHpw/picturesque-profile.png
-" alt="Picturesque profile" aria-label="Picturesque profile" />
+    <img src="https://i.ibb.co/WFkQHpw/picturesque-profile.png" alt="Picturesque profile" aria-label="Picturesque profile" />
 </div>
 
 - Customers details are saved on the left if the save info box was ticked during checkout. The address can also be updated from the page.
@@ -286,7 +274,7 @@ As a user to the Picturesque website I expect/want/need:
 
 ### Testing
 
-Picturesque testing: [Testing](https://github.com/anthonybguillermo/picturesque/blob/master/TESTING.md).
+Picturesque testing: [Testing](TESTING.md).
 
 ### Deployment
 - In Github create a requirements file by typing 'sudo pip3 freeze --local > requirements.txt'.
