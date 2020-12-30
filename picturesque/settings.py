@@ -27,7 +27,7 @@ SECRET_KEY = '!^ubl$@i4nflic3ky$*!t1eb339q43636sf9b_7kvu^e%5hfkz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['abg-picturesque-2.herokuapp.com', 'localhost']
 
 
 # Application definition
