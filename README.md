@@ -304,7 +304,7 @@ DATABASE = {
 ```
 - Connect to new Postgres data base and migrate the data along with any fixtures to populate the model.
 - Create a super user to access the admin panel
-- in settings.py set the Postgres database as default and if in development set to sqlite3
+- In settings.py set the Postgres database as default and if in development set to sqlite3
 ```
 if 'DATABASE_URL' in os.environ:
 DATABASES = {
@@ -318,7 +318,7 @@ DATABASES = {
 	}
 }
 ```
--Install pip3 install gunicorn to act as webserver. Add a procfile to create a web dyno.
+-Install pip3 install gunicorn to act as a webserver. Add a procfile to create a web dyno.
 ```
 web: gunicorn boutique_ado.wsgi:application
 ```
@@ -332,7 +332,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = ['ckz8780-boutique-ado.herokuapp.com', 'localhost']
 ```
 -Push code to Github and then in Heroku settings set to connect Github. This is to make the deploys automatic. 
-- Generate aa random secret key and set SECRET_KEY in config vars. Then in setting.py remove the secret key and set it to look in the environment. Also set debug to be in development mode only.
+- Generate a random secret key and set SECRET_KEY in config vars. Then in setting.py remove the secret key and set it to look in the environment. Also set debug to be in development mode only.
 ```
 SECRET_KEY  =  os.environ.get('SECRET_KEY', '')
 DEBUG  =  'DEVELOPMENT'  in  os.environ
@@ -356,7 +356,7 @@ DEBUG  =  'DEVELOPMENT'  in  os.environ
   }
 ]
 ```
-- Create an s3 bucker policy , allow all principles by using a * and service is get object. Copy and paste the arn to add statement and generate a policy.
+- Create an s3 bucker policy , allow all principles by using a * and service is get object. Copy and paste the ARN to add statement and generate a policy.
 - Copy the policy and paste in the bucket policy editor. Add a /* after the bucket name to allow access to all resources in the bucket.
 - Go to access control list under principals and enable public access.
 - Create a user through IAM by first creating a group and creating a policy for the group, then create a user to add to the group to use the policy.
@@ -434,4 +434,4 @@ Ideas for this project were taken from:
 - [Displate](https://displate.com/displate/1542421)
 - [House of Mouse](https://thehouseofmouse.herokuapp.com/)
 
-Previous Code Institute Projects were also an inspiration and basis for this project (Love Running, Resume, Whiskey Drop, Thorin & Company, Task Manager Application and Boutique Ado).
+Previous Code Institute Projects were also an inspiration and guidance for this project (Love Running, Resume, Whiskey Drop, Thorin & Company, Task Manager Application and Boutique Ado).
