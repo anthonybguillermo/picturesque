@@ -286,7 +286,7 @@ As a user to the Picturesque website I expect/want/need:
 
 ### Testing
 
-Picturesque testing: [Testing](TESTING.md).
+Picturesque testing: [Testing](https://github.com/anthonybguillermo/picturesque/blob/master/TESTING.md).
 
 ### Deployment
 - In Github create a requirements file by typing 'sudo pip3 freeze --local > requirements.txt'.
