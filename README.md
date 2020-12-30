@@ -2,7 +2,7 @@
 
 *Developer: Anthony Guillermo*
 
-[Picturesque](/) is a website developed for the Full Stack Frameworks with Django Milestone Project. The purpose of Picturesque is to showcase original posters made by the artistic team at Picturesque and give potential customers the ability to purchase these limited quantity exclusive posters. The site was designed to give the customers an easy and intuitive shopping experience. This site is specifically for customers who wish to purchase one of a kind original exclusive posters which give an insight into the artists mind.
+[Picturesque](https://abg-picturesque-2.herokuapp.com/) is a website developed for the Full Stack Frameworks with Django Milestone Project. The purpose of Picturesque is to showcase original posters made by the artistic team at Picturesque and give potential customers the ability to purchase these limited quantity exclusive posters. The site was designed to give the customers an easy and intuitive shopping experience. This site is specifically for customers who wish to purchase one of a kind original exclusive posters which give an insight into the artists mind.
 
 ## Table of Contents
 1. [UX](#ux)
@@ -275,22 +275,142 @@ As a user to the Picturesque website I expect/want/need:
 
 ### Testing
 
-Picturesque testing: [Testing](TESTING.md).
+Picturesque testing: [Testing](https://github.com/anthonybguillermo/picturesque/blob/master/TESTING.md).
 
 ### Deployment
-- In Github create a requirements file by typing 'sudo pip3 freeze --local > requirements.txt'.
-- Create a Procfile by typing 'echo web: python app.py > Procfile'.
-- In Heroku create a new app and input a unique app name 'abg-ricebowl'. Choose 'Europe' as the region. Click "Create App".
-- In Github terminal type 'heroku login' and log into Heroku.
-- Type 'heroku apps' to check if the created app 'abg-ricebowl' appears.
-- Create a new repository by typing 'git init'
-- Type 'git add .' then 'git commit -m "(commit message)"' to add files to repository.
-- From deployment tab in Heroku copy 'heroku git:remote -a abg-ricebowl' and paste into Github to set the remote to Heroku.
-- Push code to Heroku by typing 'git push heroku master'
-- Tell Heroku to run the app by typing 'heroku ps:scale web=1'
-- In Heroku go to settings tab and under config vars set the type 'IP' in key and '0.0.0.0' in value to set the IP address. Then type 'PORT' in key and '5000' in value to set the port.
-- Click open app to check the app has been deployed.
-- Project link: [Picturesque](/)
+
+- Create a new app in Heroku
+- Go to resources tab add Heroku Postgres 
+-Install the following apps using pip3 install
+```
+dj_database_url and psycopg2-binary
+```
+- Go to project level settings in Github. Import
+```
+dj_database_url
+```
+- In databases comment out default configuration then set the Postgres database as default.
+```
+# DATABASES = {
+# 'default': {
+# 'ENGINE': 'django.db.backends.sqlite3',
+# 'NAME': BASE_DIR / 'db.sqlite3',
+# }
+# }
+
+DATABASE = {
+'default' = dj_database_url('<postgress config variable>')
+}
+```
+- Connect to new Postgres data base and migrate the data along with any fixtures to populate the model.
+- Create a super user to access the admin panel
+- in settings.py set the Postgres database as default and if in development set to sqlite3
+```
+if 'DATABASE_URL' in os.environ:
+DATABASES = {
+'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
+else:
+DATABASES = {
+'default': {
+'ENGINE': 'django.db.backends.sqlite3',
+'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+	}
+}
+```
+-Install pip3 install gunicorn to act as webserver. Add a procfile to create a web dyno.
+```
+web: gunicorn boutique_ado.wsgi:application
+```
+- Disable collect static in Heroku as the app doesn't load static files
+```
+herkoku config:set DISABLE_COLLECTSTATIC=1
+```
+- All host name to allowed host in settings.py and set debug to development
+```
+DEBUG = 'DEVELOPMENT' in os.environ
+ALLOWED_HOSTS = ['ckz8780-boutique-ado.herokuapp.com', 'localhost']
+```
+-Push code to Github and then in Heroku settings set to connect Github. This is to make the deploys automatic. 
+- Generate aa random secret key and set SECRET_KEY in config vars. Then in setting.py remove the secret key and set it to look in the environment. Also set debug to be in development mode only.
+```
+SECRET_KEY  =  os.environ.get('SECRET_KEY', '')
+DEBUG  =  'DEVELOPMENT'  in  os.environ
+```
+- Using AWB s3 create bucket for the static files and allow public access and set the region.
+- In bucket settings under properties turn on static website hosting. Fill in default values for documents.
+- In permissions tab paste in a cors configuration
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
+- Create an s3 bucker policy , allow all principles by using a * and service is get object. Copy and paste the arn to add statement and generate a policy.
+- Copy the policy and paste in the bucket policy editor. Add a /* after the bucket name to allow access to all resources in the bucket.
+- Go to access control list under principals and enable public access.
+- Create a user through IAM by first creating a group and creating a policy for the group, then create a user to add to the group to use the policy.
+- User access and secret access key are generated and can be downloaded as a csv.
+- In git hub pip3 install boto3 and django storages then freeze to requirements.txt
+- Set up access to the bucket in settings.py and set USE_AWS to true in Heroku config vars.
+```
+if 'USE_AWS' in os.environ:
+
+AWS_STORAGE_BUCKET_NAME = '<bucket name>'
+AWS_S3_REGION_NAME = '<region>'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+```
+
+- Add the AWS access and secret access to the config vars in Heroku
+- Create a file custom_storages to store images and static files. 
+```
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+class StaticStorage(S3Boto3Storage):
+location = settings.STATICFILES_LOCATION
+
+class MediaStorage(S3Boto3Storage):
+location = settings.MEDIAFILES_LOCATION
+```
+- Set the location of the storages in settings.py and override static media files
+```
+
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_LOCATION = 'static'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+MEDIAFILES_LOCATION = 'media'
+
+
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+```
+- Set the cache in settings.py to save the files
+```
+AWS_S3_OBJECT_PARAMETERS = {
+'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+'CacheControl': 'max-age=94608000',
+}
+```
+- In s3 bucket create a media folder alongside the static folder and upload all images for the site. Then grant public access to files.
+- For Stripe to work in Heroku config vars save the STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY and paste the keys from Stripe.
+- Set up web hooks by adding the Heroku <heroku app url/checkout/wh> for the app to web hooks endpoint to receive all events.
+- Get web hooks signing secret and add to Heroku config vars under STRIP_WH_SECRET.
+
+Click open app to check the app has been deployed.
+- Project link: [Picturesque](https://abg-picturesque-2.herokuapp.com/)
 
 The code for this project was pushed to Github.
 - Github link: [Picturesque Github](https://github.com/anthonybguillermo/picturesque)
@@ -314,4 +434,4 @@ Ideas for this project were taken from:
 - [Displate](https://displate.com/displate/1542421)
 - [House of Mouse](https://thehouseofmouse.herokuapp.com/)
 
-Previous Code Institute Projects were also an inspiration for this project (Love Running, Resume, Whiskey Drop, Thorin & Company, Task Manager Application and Boutique Ado).
+Previous Code Institute Projects were also an inspiration and basis for this project (Love Running, Resume, Whiskey Drop, Thorin & Company, Task Manager Application and Boutique Ado).

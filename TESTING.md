@@ -4,13 +4,12 @@
 
 ## Tests and Fixes
 
-[HTML Validator Results](/)
+[HTML Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fabg-picturesque-2.herokuapp.com%2F)
 
-[CSS Validator Results](/)
+[CSS Validator Results](http://www.css-validator.org/validator?uri=https%3A%2F%2Fabg-picturesque-2.herokuapp.com%2F&profile=css21&usermedium=all&warning=1&lang=en)
 
 **Desktop/Tablet/Mobile** 
 Tested on Chrome Desktop/Tablet/Mobile simulator
-hompage carousel
 
 ***Desktop/Tablet/Mobile Issue***
 Carousel images not loading properly
