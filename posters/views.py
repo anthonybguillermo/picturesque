@@ -5,7 +5,6 @@ from django.db.models.functions import Lower
 
 from .models import Poster, Category
 
-# Create your views here.
 
 def all_posters(request):
     """ A view to show all posters, including sorting and search queries """
